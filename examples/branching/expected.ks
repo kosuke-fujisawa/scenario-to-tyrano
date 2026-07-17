@@ -20,8 +20,9 @@
 [s]
 
 *choice_currypan
+; TODO(author): 「好感度」の既存変数名と初期値を確認できないため、加算処理を確定できない
 ; 「好感度」を f.affection として仮置き
-[eval exp="f.affection = f.affection + 1"]
+; [eval exp="f.affection = f.affection + 1"]
 
 #美咲
 「私もそう思ってた」[p]
