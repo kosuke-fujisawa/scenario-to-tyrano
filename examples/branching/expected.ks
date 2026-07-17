@@ -1,4 +1,4 @@
-; voice-to-tyrano により examples/branching/input.txt から生成した初稿
+; scenario-to-tyrano により examples/branching/input.txt から生成した初稿
 ; 作者による確認・編集を前提とする
 
 *start
@@ -13,7 +13,7 @@
 昼休みの購買前。美咲が二つのパンを持って立っている。[p]
 
 #美咲
-「どっちがいいと思う。カレーパンとメロンパン。」[p]
+「どっちがいいと思う？　カレーパンとメロンパン」[p]
 
 [glink target="*choice_currypan" text="カレーパンと答える" x=260 y=200]
 [glink target="*choice_melonpan" text="メロンパンと答える" x=260 y=300]
@@ -24,14 +24,14 @@
 [eval exp="f.affection = f.affection + 1"]
 
 #美咲
-「私もそう思ってた。」[p]
+「私もそう思ってた」[p]
 
 [jump target=*after_choice]
 
 *choice_melonpan
 
 #美咲
-「ふうん、そっちなんだ。」[p]
+「ふうん、そっちなんだ」[p]
 
 [jump target=*after_choice]
 
