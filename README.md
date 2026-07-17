@@ -74,6 +74,12 @@ Claude Code でこのリポジトリ（またはSkillを配置したプロジェ
 - [docs/migration-from-tsumugai.md](docs/migration-from-tsumugai.md) — 前身プロジェクト`tsumugai`からの知識移行の記録
 - [tests/README.md](tests/README.md) — 将来的なテスト観点
 
+## 自動レビュー
+
+Draftでない同一リポジトリ内のPull Requestに対し、[`kosuke-fujisawa/ai-review-action`](https://github.com/kosuke-fujisawa/ai-review-action) を実行します。実行には、GitHub ActionsのリポジトリSecret `OPENAI_API_KEY` が必要です。利用モデルはリポジトリVariable `AI_REVIEW_MODEL` で上書きでき、未設定時は `gpt-5-mini` を使います。
+
+ワークフローは [`.github/workflows/ai-review.yml`](.github/workflows/ai-review.yml)、リポジトリ固有のレビュー方針は [`.github/ai-review-instructions.md`](.github/ai-review-instructions.md) で管理します。
+
 ## ライセンス
 
 [MIT License](LICENSE)
