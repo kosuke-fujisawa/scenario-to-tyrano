@@ -1,0 +1,37 @@
+name: AI Review
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, ready_for_review]
+
+permissions:
+  checks: read
+  contents: read
+  pull-requests: write
+
+concurrency:
+  group: ai-review-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  review:
+    if: ${{ !github.event.pull_request.draft && github.event.pull_request.head.repo.full_name == github.repository }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: kosuke-fujisawa/ai-review-action@v1
+        with:
+          github-token: ${{ github.token }}
+          openai-api-key: ${{ secrets.OPENAI_API_KEY }}
+          model: ${{ vars.AI_REVIEW_MODEL || 'gpt-5-mini' }}
+          max-diff-chars: 30000
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: ai-review
+          path: tmp/ai-review/
+          retention-days: 3
