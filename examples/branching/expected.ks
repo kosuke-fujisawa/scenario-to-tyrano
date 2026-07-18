@@ -27,14 +27,14 @@
 #美咲
 「私もそう思ってた」[p]
 
-[jump target=*after_choice]
+[jump target="*after_choice"]
 
 *choice_melonpan
 
 #美咲
 「ふうん、そっちなんだ」[p]
 
-[jump target=*after_choice]
+[jump target="*after_choice"]
 
 *after_choice
 

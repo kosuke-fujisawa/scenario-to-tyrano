@@ -70,7 +70,7 @@ Claude Code でこのリポジトリ（またはSkillを配置したプロジェ
 ## ドキュメント
 
 - [docs/design.md](docs/design.md) — 解決する問題と設計上の中心
-- [docs/conversion-policy.md](docs/conversion-policy.md) — 変換時の判断原則
+- [.claude/skills/scenario-to-tyrano/SKILL.md](.claude/skills/scenario-to-tyrano/SKILL.md) — 変換時の判断原則を含むSkill本体（変換規則の正本）
 - [docs/migration-from-tsumugai.md](docs/migration-from-tsumugai.md) — 前身プロジェクト`tsumugai`からの知識移行の記録
 - [tests/README.md](tests/README.md) — 将来的なテスト観点
 
