@@ -27,4 +27,4 @@
 
 - 原文（作者が表現したセリフ、地の文、展開、分岐）を創作的に書き換えない
 - 意図が不明な箇所を推測で補わない。コメントまたは確認事項として残す
-- 詳細は [docs/conversion-policy.md](docs/conversion-policy.md) と [.claude/skills/scenario-to-tyrano/SKILL.md](.claude/skills/scenario-to-tyrano/SKILL.md) に従う
+- 詳細は [.claude/skills/scenario-to-tyrano/SKILL.md](.claude/skills/scenario-to-tyrano/SKILL.md) に従う（変換規則の正本）

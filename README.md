@@ -36,6 +36,7 @@ scenario-to-tyrano
 - セリフ、地の文、場面、演出、分岐、状態変化、遷移の抽出
 - `.ks`ファイルの生成
 - 最低限の構造確認（ラベル重複、未定義ジャンプ先など）
+- 変換内容・未解決TODO・検査結果を記録した変換レポート（`.report.md`）の生成
 
 ## 行わないこと
 
@@ -61,7 +62,7 @@ Claude Code でこのリポジトリ（またはSkillを配置したプロジェ
 
 出力先を省略した場合は、入力ファイルと同じ場所に同名の`.ks`ファイルを生成します。
 
-変換例は [examples/](examples/) を参照してください。`input.txt`（自然言語のシナリオ）と`expected.ks`（期待されるティラノスクリプト）の対で構成されています。`literal-syntax`では、原文の記号をティラノの制御構文に誤解釈させない変換例を示します。
+変換例は [examples/](examples/) を参照してください。`input.txt`（自然言語のシナリオ）と`expected.ks`（期待されるティラノスクリプト）の対で構成され、`simple`には変換レポートの期待例`expected.report.md`もあります。`literal-syntax`では、原文の記号をティラノの制御構文に誤解釈させない変換例を示します。
 
 ## 名称変更履歴
 
@@ -70,7 +71,7 @@ Claude Code でこのリポジトリ（またはSkillを配置したプロジェ
 ## ドキュメント
 
 - [docs/design.md](docs/design.md) — 解決する問題と設計上の中心
-- [docs/conversion-policy.md](docs/conversion-policy.md) — 変換時の判断原則
+- [.claude/skills/scenario-to-tyrano/SKILL.md](.claude/skills/scenario-to-tyrano/SKILL.md) — 変換時の判断原則を含むSkill本体（変換規則の正本）
 - [docs/migration-from-tsumugai.md](docs/migration-from-tsumugai.md) — 前身プロジェクト`tsumugai`からの知識移行の記録
 - [tests/README.md](tests/README.md) — 将来的なテスト観点
 
