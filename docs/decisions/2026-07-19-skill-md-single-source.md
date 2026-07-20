@@ -62,7 +62,7 @@ Not applicable
 
 ## Verification / どこで、何を検証するか
 
-- `grep -r conversion-policy` が何もヒットしないこと
+- `rg -n "conversion-policy" --glob "!docs/decisions/**" .` で、設計判断履歴を除く現行ファイルから参照が見つからないこと
 - `SKILL.md` を単体で読み、変換に必要な規則がすべて含まれていること(examples/の期待出力を再現できること)
 
 ## Evidence / 根拠

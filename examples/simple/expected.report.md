@@ -2,7 +2,7 @@
 
 # 変換レポート
 
-- 変換日時: `<YYYY-MM-DDTHH:mm:ss+09:00>`
+- 変換日時: `2026-07-19T12:34:56+09:00`
 - 入力ファイル: `examples/simple/input.txt`
 - 出力ファイル: `examples/simple/expected.ks`
 
